@@ -1,0 +1,85 @@
+@import "../vars.less";
+
+#page-home {
+    padding-top: 20px;
+
+    .bonus {
+        padding: 25px;
+        background: @orange;
+        box-shadow: @boxShadow;
+        border-radius: @boxRadius;
+        font-weight: 700;
+        text-align: center;
+    }
+    
+    .amount {
+        font-size: 72px;
+        line-height: 88px;
+        color: @white;
+    }
+
+    .description {
+        margin-bottom: 30px;
+        font-size: 20px;
+        line-height: 24px;
+        color: @blue;
+    }
+
+    .brands {
+        margin-top: 20px;
+        padding: 20px 27px 20px 20px;
+        background-color: @white;
+        box-shadow: @boxShadow;
+        border-radius: @boxRadius;
+        font-weight: 700;
+
+        .title {
+            padding-bottom: 20px;
+            font-size: 20px;
+            line-height: 24px;
+            color: @black;
+        }
+
+        .items {
+            .item {
+                display: flex;
+                padding: 8px 0;
+                align-items: center;
+                border-bottom: 1px solid @white;
+
+                .picture {
+
+                }
+
+                .name {
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 17px;
+                    flex-grow: 1;
+                    color: @black;
+                }
+
+                .discount {
+                    font-size: 20px;
+                    line-height: 24px;
+                    color: @orange;
+
+                }
+            }
+        }
+        
+        .more {
+            display: block;
+            padding-top: 20px;
+            text-align: center;
+
+            span {
+                font-size: 14px;
+                line-height: 17px;
+                color: @blue;
+                cursor: pointer;
+            }
+        }
+
+    }
+}

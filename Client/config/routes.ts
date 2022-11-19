@@ -8,7 +8,7 @@ export default [
     access: 'canUser',
     name: 'App',
     path: '/app',
-    component: '@/layouts/ProCabinetLayout',
+    component: '@/layouts/AppLayout',
     routes: [
       {
         path: '/app',
