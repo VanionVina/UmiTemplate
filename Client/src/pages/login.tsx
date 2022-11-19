@@ -1,14 +1,9 @@
 import { getUser } from '@/services/UserApi';
-import { SettingOutlined } from '@ant-design/icons';
 import { useModel } from '@umijs/max';
 import { Access } from '@umijs/max';
-import { useSearchParams } from '@umijs/max';
 import { useAccess, history } from '@umijs/max';
 import { Navigate } from '@umijs/max';
-import { request } from '@umijs/max';
-import { Button, Col, Form, Input, Layout, message, Row, Space } from 'antd';
-import { Content } from 'antd/lib/layout/layout';
-import { useEffect, useState } from 'react';
+import { Button, Form, Input, message, Space } from 'antd';
 
 export default () => {
   const { initialState, setInitialState } = useModel('@@initialState');

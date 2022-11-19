@@ -1,8 +1,5 @@
-import { HubConnection, HubConnectionBuilder } from "@microsoft/signalr";
-import { useAccess } from "@umijs/max";
 import { request } from "@umijs/max";
-import { history, useModel } from "@umijs/max";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useModel } from "@umijs/max";
 
 export default function useLoginModel() {
     const { initialState, setInitialState } = useModel('@@initialState');

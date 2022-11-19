@@ -1,21 +1,20 @@
 @import "../vars.less";
 
 .body {
-    background-color: @white;
     color: @black;
+    background-color: @white;
 }
 
 .container {
-    padding-left: 15px;
     padding-right: 15px;
+    padding-left: 15px;
 }
 
 .button {
     display: block;
     padding: 15px 0;
-    background: @orange;
-    border-radius: @boxRadius;
     text-align: center;
+    border-radius: @boxRadius;
 
     cursor: pointer;
 
@@ -23,13 +22,51 @@
     font-size: 16px;
 
     color: @white;
+    background: @orange;
 
     &.white {
-        background: @white;
         color: @black;
+        background: @white;
         &:hover {
             color: @orange;
             box-shadow: @boxShadow;
         }
     }
+}
+
+.menu {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 25px 30px;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: @boxShadow;
+    backdrop-filter: blur(15px);
+    border-radius: 0px;
+
+    .item {
+        width: 30px;
+        height: 30px;
+        cursor: pointer; 
+
+        &.house {
+            background-image: url(/icons/house.svg)
+        }
+
+        &.message {
+            background-image: url(/icons/message.svg)
+        }
+
+        &.bell {
+            background-image: url(/icons/bell.svg)
+        }
+
+        &.user {
+            background-image: url(/icons/user.svg)
+        }
+    }
+
 }

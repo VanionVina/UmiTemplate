@@ -2,6 +2,7 @@
 
 #page-home {
     padding-top: 20px;
+    padding-bottom: 90px;
 
     .bonus {
         padding: 25px;
@@ -10,22 +11,22 @@
         border-radius: @boxRadius;
         font-weight: 700;
         text-align: center;
-    }
     
-    .amount {
-        font-size: 72px;
-        line-height: 88px;
-        color: @white;
+        .amount {
+            font-size: 72px;
+            line-height: 88px;
+            color: @white;
+        }
+
+        .description {
+            margin-bottom: 30px;
+            font-size: 20px;
+            line-height: 24px;
+            color: @blue;
+        }
     }
 
-    .description {
-        margin-bottom: 30px;
-        font-size: 20px;
-        line-height: 24px;
-        color: @blue;
-    }
-
-    .brands {
+    .table-wrapper {
         margin-top: 20px;
         padding: 20px 27px 20px 20px;
         background-color: @white;
@@ -45,10 +46,10 @@
                 display: flex;
                 padding: 8px 0;
                 align-items: center;
-                border-bottom: 1px solid @white;
+                border-bottom: 1px solid @grey;
 
                 .picture {
-
+                    margin-right: 9px;
                 }
 
                 .name {
@@ -57,13 +58,21 @@
                     line-height: 17px;
                     flex-grow: 1;
                     color: @black;
+
+                    &.bold {
+                        font-weight: 700;
+                    }
                 }
 
-                .discount {
+                .amount {
+                    padding-left: 5px;
                     font-size: 20px;
                     line-height: 24px;
                     color: @orange;
 
+                    &.danger {
+                        color: @red;
+                    }
                 }
             }
         }
@@ -80,6 +89,43 @@
                 cursor: pointer;
             }
         }
+    }
 
+    .news-wrapper {
+        display: flex;
+        column-gap: 10px;
+        margin-top: 20px;
+        overflow-x: scroll;
+
+        .news {
+            padding: 10px;
+            box-shadow: @boxShadow;
+            border-radius: @boxRadius;
+            background: @white;
+
+            .picture {
+                width: 341px;
+                img {
+                    max-width: 100%;
+                }
+            }
+
+            .title {
+                padding-top: 10px;
+                margin-bottom: 10px;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 29px;
+                color: @black;
+            }
+
+            .descr {
+                font-style: normal;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 20px;
+                color: @grey;
+            }
+        }
     }
 }
