@@ -1,0 +1,94 @@
+@import "../vars.less";
+#page-chat {
+    padding-top: 90px;
+
+    .messages {
+        .message{ 
+            display: flex;
+            padding-bottom: 10px;
+
+            .time {
+                font-size: 14px;
+                line-height: 17px;
+                color: @darkGrey;
+                align-self: flex-end;
+                margin: 0 8px 0 8px;
+            }
+
+            .body {
+                box-shadow: @boxShadow;
+                padding: 20px;
+                .name {
+                    margin-bottom: 10px;
+                    font-size: 14px;
+                    line-height: 17px;
+                }
+                .text {
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+            }
+
+            &.right {
+                margin-left: 42px;
+                .body {
+                    background: @white;
+                    border-radius: 30px 30px 0px 30px;
+                    .name {
+                        color: @darkGrey;
+                    }
+                    .text{
+                        color: @black;
+                    }
+                }
+            }
+
+            &.left {
+                padding-right: 45px;
+                .body {
+                    background: @orange;
+                    border-radius: 30px 30px 30px 0px;
+                    .name {
+                        color: @blue;
+                    }
+                    .text{
+                        color: @white;
+                    }
+                }
+            }
+        }
+    }
+
+    .bottom-bar {
+        position: fixed;
+        display: flex;
+        padding: 10px;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+
+        .input {
+            flex-grow: 1;
+        }
+
+        label {
+            width: 100%;
+            cursor: text;
+        }
+
+        .button-send {
+            padding: 20px;
+            margin-left: 10px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+            border-radius: @boxRadius;
+            background: @orange;
+            cursor: pointer;
+            &:hover {
+                background: @orange2;
+            }
+        }
+    }
+
+}

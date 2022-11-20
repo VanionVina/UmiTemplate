@@ -3,6 +3,9 @@ import { Navigate } from "@umijs/max";
 import { Access } from "@umijs/max";
 import { useModel } from "@umijs/max";
 import "@/styles/app/home.less";
+import { Link } from "@umijs/max";
+
+import MenuBar from "@/components/app/menuBar"
 
 export default () => {
   const { initialState, setInitialState } = useModel('@@initialState');
@@ -126,12 +129,7 @@ export default () => {
               </div>
 
             {/* Menu */}
-            <div className="menu">
-              <div className="item house"></div>
-              <div className="item message"></div>
-              <div className="item bell"></div>
-              <div className="item user"></div>
-            </div>
+            <MenuBar />
 
             </div>
           </div>

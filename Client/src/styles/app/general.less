@@ -24,12 +24,23 @@
     color: @white;
     background: @orange;
 
+    &:hover {
+        background: @orange2;
+    }
+
     &.white {
         color: @black;
         background: @white;
         &:hover {
             color: @orange;
             box-shadow: @boxShadow;
+        }
+    }
+
+    &.danger {
+        background: @red;
+        &:hover {
+            background: @red2;
         }
     }
 }
@@ -53,7 +64,7 @@
         cursor: pointer; 
 
         &.house {
-            background-image: url(/icons/house.svg)
+            background-image: url(/icons/houseInactive.svg)
         }
 
         &.message {
@@ -68,5 +79,62 @@
             background-image: url(/icons/user.svg)
         }
     }
+}
 
+.top-bar {
+    position: fixed;
+    display: flex;
+    right: 0;
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+    width: 100%;
+    background: #F6F6F6;
+    border-bottom: 1px solid #DEDCDC;
+    padding: 15px;
+    margin-bottom: 100px;
+
+    .header {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        flex-grow: 1;
+        padding: 9px;
+        color: @black;
+    }
+    
+    .button-back {
+        width: 46px;
+        height: 46px;
+        background-color: 2px solid @white;
+        border-radius: 100%;
+        padding: 10px 14px 14px 14px;
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: @boxShadow;
+        }
+    }
+}
+
+.input {
+    padding: 20px 0px 20px 30px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+    border-radius: @boxRadius;
+    font-size: 16px;
+    line-height: 20px;
+    color: @darkGrey;
+    background: @white;
+
+    label {
+        cursor: text;
+        width: 100%;
+    }
+
+    input {
+        width: 90%;
+        border: none;
+        outline: none;
+    }
 }
