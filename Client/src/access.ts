@@ -6,7 +6,6 @@ export default function access(initialState: CurrentUser) {
   console.log(token, userName);
 
   return {
-    // canUser: (token !== null && userName !== null),
     canUser: (token !== null),
     canTest: false
   };

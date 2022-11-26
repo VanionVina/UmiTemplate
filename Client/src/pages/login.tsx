@@ -12,7 +12,6 @@ export default () => {
   const access = useAccess();
 
   const formHandler = async (data: any) => {
-    //await loginHandler(data.name);
     const user = await getUser(data);
 
     if (user == null) {

@@ -28,67 +28,6 @@ public class UserController : Controller
         _mariaDbContext = mariaDbContext;
     }
 
-    [HttpGet]
-    public IEnumerable<User> Get()
-    {
-        return _mariaDbContext.Users.ToList();
-    }
-
-    [HttpGet("{id}")]
-    public User Get(int id) {
-        return _mariaDbContext.Users.FirstOrDefault(x => id == x.Id);
-    }
-
-    // [HttpPost("{id}")]
-    // public IActionResult Post(int id, User user)
-    // {
-    //     var userExist = _mariaDbContext.Users.FirstOrDefault(x => x.Id == id);
-    //     if (userExist == null) {
-    //         return NotFound();
-    //     }
-        
-    //     userExist.Name = user.Name;
-    //     userExist.Surname = user.Surname;
-    //     userExist.Age = user.Age;
-    //     userExist.DepartmentId = user.DepartmentId;
-    //     userExist.Password = user.Password;
-
-    //     _mariaDbContext.Update(userExist);
-    //     _mariaDbContext.SaveChanges();
-
-    //     return Ok();
-    // }
-
-    [HttpPut]
-    public IEnumerable<Test> Put(int a, double b)
-    {
-        return Enumerable.Range(1, 5).Select(index => new Test
-        {
-            Date = DateTime.Now.AddDays(index),
-            Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-        })
-        .ToArray();
-    }
-
-    [HttpDelete]
-    public IEnumerable<Test> Delete(int a, double b)
-    {
-        return Enumerable.Range(1, 5).Select(index => new Test
-        {
-            Date = DateTime.Now.AddDays(index),
-            Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-        })
-        .ToArray();
-    }
-
-    // ------------------------------------------------------------------->
-
-    [HttpGet]
-    [Route("[action]")]
-    public User Test() {
-        return new User();
-    }
-
     [HttpPost]
     public IActionResult Login(LoginModel model) {
         string username = model.Username;
